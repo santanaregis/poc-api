@@ -5,7 +5,7 @@ import com.rapidanet.rapidanetweb.service.dto.PessoaDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-@Mapper(componentModel = "spring", uses = {EnderecoMapper.class})
+@Mapper(componentModel = "spring", uses = {EnderecoMapper.class, ContatoMapper.class})
 public interface PessoaMapper extends EntityMapper<PessoaDTO, Pessoa> {
 
     PessoaDTO toDto(Pessoa pessoa);

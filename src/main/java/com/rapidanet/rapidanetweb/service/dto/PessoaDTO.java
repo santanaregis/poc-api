@@ -19,6 +19,7 @@ public class PessoaDTO implements Serializable {
     public String profissao;
     public Status status;
     public List<EnderecoDTO> enderecos;
+    public List<ContatoDTO> contatos;
 
     public Long getId() {
         return id;
@@ -106,5 +107,13 @@ public class PessoaDTO implements Serializable {
 
     public void setEnderecos(List<EnderecoDTO> enderecos) {
         this.enderecos = enderecos;
+    }
+
+    public List<ContatoDTO> getContatos() {
+        return contatos;
+    }
+
+    public void setContatos(List<ContatoDTO> contatos) {
+        this.contatos = contatos;
     }
 }

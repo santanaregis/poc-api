@@ -5,8 +5,7 @@ import com.rapidanet.rapidanetweb.enumerator.TipoPessoa;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "PESSOA")
@@ -48,10 +47,10 @@ public class Pessoa implements Serializable {
     public Status status;
 
     @OneToMany(mappedBy = "pessoa",orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<Endereco> enderecos = new ArrayList<>();
+    private Set<Endereco> enderecos;
 
     @OneToMany(mappedBy = "pessoa",orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<Contato> contatos = new ArrayList<>();
+    private Set<Contato> contatos;
 
     public Long getId() {
         return id;
@@ -133,19 +132,19 @@ public class Pessoa implements Serializable {
         this.status = status;
     }
 
-    public List<Endereco> getEnderecos() {
+    public Set<Endereco> getEnderecos() {
         return enderecos;
     }
 
-    public void setEnderecos(List<Endereco> enderecos) {
+    public void setEnderecos(Set<Endereco> enderecos) {
         this.enderecos = enderecos;
     }
 
-    public List<Contato> getContatos() {
+    public Set<Contato> getContatos() {
         return contatos;
     }
 
-    public void setContatos(List<Contato> contatos) {
+    public void setContatos(Set<Contato> contatos) {
         this.contatos = contatos;
     }
 }
