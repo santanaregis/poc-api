@@ -1,53 +1,24 @@
-package com.rapidanet.rapidanetweb.model;
+package com.rapidanet.rapidanetweb.service.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.rapidanet.rapidanetweb.enumerator.Status;
+import com.rapidanet.rapidanetweb.enumerator.TipoPessoa;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import java.io.Serializable;
 
-@Entity
-@Table(name = "ENDERECO")
-public class Endereco {
+public class EnderecoDTO implements Serializable {
 
-    @Id
-    @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
-    @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
-
-    @Column(name = "RUA")
     private String rua;
-
-    @Column(name = "NUMERO")
     private String numero;
-
-    @Column(name = "COMPLEMENTO")
     private String complemento;
-
-    @Column(name = "CEP")
     private String cep;
-
-    @Column(name = "BAIRRO")
     private String bairro;
-
-    @Column(name = "CIDADE")
     private String cidade;
-
-    @Column(name = "ESTADO")
     private String estado;
-
-    @Column(name = "PAIS")
     private String pais;
-
-    @Column(name = "LATITUDE")
     private String latitude;
-
-    @Column(name = "LONGITUDE")
     private String longitude;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "PESSOA_ID")
-    @JsonIgnore
-    private Pessoa pessoa;
 
     public Long getId() {
         return id;
@@ -136,13 +107,4 @@ public class Endereco {
     public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
-
-    public Pessoa getPessoa() {
-        return pessoa;
-    }
-
-    public void setPessoa(Pessoa pessoa) {
-        this.pessoa = pessoa;
-    }
-
 }

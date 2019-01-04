@@ -5,6 +5,8 @@ import com.rapidanet.rapidanetweb.enumerator.TipoPessoa;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "PESSOA")
@@ -44,6 +46,9 @@ public class Pessoa implements Serializable {
     @Column(name = "status")
     @Enumerated(EnumType.STRING)
     public Status status;
+
+    @OneToMany(mappedBy = "pessoa",cascade = CascadeType.ALL,orphanRemoval = true)
+    private List<Endereco> enderecos = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -123,5 +128,13 @@ public class Pessoa implements Serializable {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public List<Endereco> getEnderecos() {
+        return enderecos;
+    }
+
+    public void setEnderecos(List<Endereco> enderecos) {
+        this.enderecos = enderecos;
     }
 }
