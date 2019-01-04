@@ -8,7 +8,6 @@ import java.util.List;
 
 public class PessoaDTO implements Serializable {
 
-
     private Long id;
     public TipoPessoa tipoPessoa;
     public String nome;

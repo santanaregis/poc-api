@@ -6,6 +6,7 @@ import com.rapidanet.rapidanetweb.service.EnderecoService;
 import com.rapidanet.rapidanetweb.service.PessoaService;
 import com.rapidanet.rapidanetweb.service.dto.EnderecoDTO;
 import com.rapidanet.rapidanetweb.service.dto.PessoaDTO;
+import org.apache.tomcat.util.http.ResponseUtil;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
@@ -46,6 +47,26 @@ public class EnderecoResource {
     }
 
     /**
+     * PUT  /endereco : Updates an existing pessoa.
+     *
+     * @param enderecoDTO the enderecoDTO to update
+     * @return the ResponseEntity with status 200 (OK) and with body the updated enderecoDTO,
+     * or with status 400 (Bad Request) if the enderecoDTO is not valid,
+     * or with status 500 (Internal Server Error) if the enderecoDTO couldn't be updated
+     * @throws URISyntaxException if the Location URI syntax is incorrect
+     */
+    @PutMapping("/endereco")
+    public ResponseEntity<EnderecoDTO> updatePessoa(@RequestBody EnderecoDTO enderecoDTO) throws Exception {
+        if (enderecoDTO.getId() == null) {
+            throw new Exception("Invalid id "+ENTITY_NAME+" idnull");
+        }
+        EnderecoDTO result = enderecoService.save(enderecoDTO);
+        return ResponseEntity.ok()
+                .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, enderecoDTO.getId().toString()))
+                .body(result);
+    }
+
+    /**
      * GET  /endereco : get all the enderecos.
      *
      * @param filter the filter of the request
@@ -56,5 +77,18 @@ public class EnderecoResource {
         List<EnderecoDTO> enderecos = enderecoService.findAll();
         return enderecos;
     }
+
+    /**
+     * DELETE  /endereco/:id : delete the "id" endereco.
+     *
+     * @param id the id of the enderecoDTO to delete
+     * @return the ResponseEntity with status 200 (OK)
+     */
+    @DeleteMapping("/endereco/{id}")
+    public ResponseEntity<Void> deleteEndereco(@PathVariable Long id) {
+        enderecoService.delete(id);
+        return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();
+    }
+
 
 }

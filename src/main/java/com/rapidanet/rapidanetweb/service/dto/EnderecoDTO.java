@@ -1,9 +1,5 @@
 package com.rapidanet.rapidanetweb.service.dto;
 
-import com.rapidanet.rapidanetweb.enumerator.Status;
-import com.rapidanet.rapidanetweb.enumerator.TipoPessoa;
-
-import javax.persistence.Column;
 import java.io.Serializable;
 
 public class EnderecoDTO implements Serializable {
