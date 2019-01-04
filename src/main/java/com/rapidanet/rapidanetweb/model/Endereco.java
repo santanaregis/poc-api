@@ -45,7 +45,7 @@ public class Endereco {
     private String longitude;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "PESSOA_ID")
+    @JoinColumn(name = "PESSOA_ID", updatable = false)
     @JsonIgnore
     private Pessoa pessoa;
 

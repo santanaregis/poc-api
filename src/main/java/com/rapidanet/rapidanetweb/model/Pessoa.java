@@ -47,7 +47,7 @@ public class Pessoa implements Serializable {
     @Enumerated(EnumType.STRING)
     public Status status;
 
-    @OneToMany(mappedBy = "pessoa",cascade = CascadeType.ALL,orphanRemoval = true)
+    @OneToMany(mappedBy = "pessoa",orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Endereco> enderecos = new ArrayList<>();
 
     public Long getId() {

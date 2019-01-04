@@ -34,14 +34,33 @@ public class PessoaResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect
      */
     @PostMapping("/pessoa")
-    public ResponseEntity<PessoaDTO> createPessoa(@RequestBody PessoaDTO pessoaDTO) throws URISyntaxException, Exception {
-//        log.debug("REST request to save Pessoa : {}", pessoaDTO);
+    public ResponseEntity<PessoaDTO> createPessoa(@RequestBody PessoaDTO pessoaDTO) throws Exception {
         if (pessoaDTO.getId() != null) {
-            //throw new BadRequestAlertException("A new pessoa cannot already have an ID", ENTITY_NAME ,"idexists");
+            throw new Exception("A new pessoa cannot already have an ID "+ENTITY_NAME+" idexists");
         }
         PessoaDTO result = pessoaService.save(pessoaDTO);
-        return ResponseEntity.created(new URI("/api/bolsas/" + result.getId()))
+        return ResponseEntity.created(new URI("/api/pessoa/" + result.getId()))
                 .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
+                .body(result);
+    }
+
+    /**
+     * PUT  /pessoa : Updates an existing pessoa.
+     *
+     * @param pessoaDTO the pessoaDTO to update
+     * @return the ResponseEntity with status 200 (OK) and with body the updated pessoaDTO,
+     * or with status 400 (Bad Request) if the pessoaDTO is not valid,
+     * or with status 500 (Internal Server Error) if the pessoaDTO couldn't be updated
+     * @throws URISyntaxException if the Location URI syntax is incorrect
+     */
+    @PutMapping("/pessoa")
+    public ResponseEntity<PessoaDTO> updatePessoa(@RequestBody PessoaDTO pessoaDTO) throws Exception {
+        if (pessoaDTO.getId() == null) {
+            throw new Exception("Invalid id "+ENTITY_NAME+" idnull");
+        }
+        PessoaDTO result = pessoaService.save(pessoaDTO);
+        return ResponseEntity.ok()
+                .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, pessoaDTO.getId().toString()))
                 .body(result);
     }
 
@@ -53,7 +72,7 @@ public class PessoaResource {
      * @return the ResponseEntity with status 200 (OK) and the list of pessoas in body
      */
     @GetMapping("/pessoa")
-    public ResponseEntity<List<PessoaDTO>> getAllBolsas(Pageable pageable, @RequestParam(required = false) String filter) {
+    public ResponseEntity<List<PessoaDTO>> getAllPessoas(Pageable pageable, @RequestParam(required = false) String filter) {
         Page<PessoaDTO> page = pessoaService.findAll(pageable);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/pessoa");
         return ResponseEntity.ok().headers(headers).body(page.getContent());
