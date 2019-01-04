@@ -5,6 +5,7 @@ import com.rapidanet.rapidanetweb.enumerator.TipoPessoa;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Set;
 
 public class PessoaDTO implements Serializable {
 
@@ -18,8 +19,8 @@ public class PessoaDTO implements Serializable {
     public String cnpj;
     public String profissao;
     public Status status;
-    public List<EnderecoDTO> enderecos;
-    public List<ContatoDTO> contatos;
+    public Set<EnderecoDTO> enderecos;
+    public Set<ContatoDTO> contatos;
 
     public Long getId() {
         return id;
@@ -101,19 +102,19 @@ public class PessoaDTO implements Serializable {
         this.status = status;
     }
 
-    public List<EnderecoDTO> getEnderecos() {
+    public Set<EnderecoDTO> getEnderecos() {
         return enderecos;
     }
 
-    public void setEnderecos(List<EnderecoDTO> enderecos) {
+    public void setEnderecos(Set<EnderecoDTO> enderecos) {
         this.enderecos = enderecos;
     }
 
-    public List<ContatoDTO> getContatos() {
+    public Set<ContatoDTO> getContatos() {
         return contatos;
     }
 
-    public void setContatos(List<ContatoDTO> contatos) {
+    public void setContatos(Set<ContatoDTO> contatos) {
         this.contatos = contatos;
     }
 }

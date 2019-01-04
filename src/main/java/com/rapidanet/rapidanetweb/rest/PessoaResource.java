@@ -4,6 +4,7 @@ import com.rapidanet.rapidanetweb.rest.util.HeaderUtil;
 import com.rapidanet.rapidanetweb.rest.util.PaginationUtil;
 import com.rapidanet.rapidanetweb.service.PessoaService;
 import com.rapidanet.rapidanetweb.service.dto.PessoaDTO;
+import org.apache.tomcat.util.http.ResponseUtil;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
@@ -76,6 +78,18 @@ public class PessoaResource {
         Page<PessoaDTO> page = pessoaService.findAll(pageable);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/pessoa");
         return ResponseEntity.ok().headers(headers).body(page.getContent());
+    }
+
+    /**
+     * GET  /pessoa/:id : get the "id" pessoa.
+     *
+     * @param id the id of the pessoaDTO to retrieve
+     * @return the ResponseEntity with status 200 (OK) and with body the pessoaDTO, or with status 404 (Not Found)
+     */
+    @GetMapping("/pessoa/{id}")
+    public PessoaDTO getPessoa(@PathVariable Long id) {
+        Optional<PessoaDTO> pessoaDTO = pessoaService.findOne(id);
+        return pessoaDTO.get();
     }
 
 }
