@@ -44,7 +44,7 @@ public class ContatoResource {
      * @param id the id of the contatoDTO to delete
      * @return the ResponseEntity with status 200 (OK)
      */
-    @DeleteMapping("/bolsas/{id}")
+    @DeleteMapping("/contato/{id}")
     public ResponseEntity<Void> deleteContato(@PathVariable Long id) {
         contatoService.delete(id);
         return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();

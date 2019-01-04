@@ -1,22 +1,14 @@
 package com.rapidanet.rapidanetweb.rest;
 
 import com.rapidanet.rapidanetweb.rest.util.HeaderUtil;
-import com.rapidanet.rapidanetweb.rest.util.PaginationUtil;
 import com.rapidanet.rapidanetweb.service.EnderecoService;
-import com.rapidanet.rapidanetweb.service.PessoaService;
 import com.rapidanet.rapidanetweb.service.dto.EnderecoDTO;
-import com.rapidanet.rapidanetweb.service.dto.PessoaDTO;
-import org.apache.tomcat.util.http.ResponseUtil;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
@@ -33,13 +25,11 @@ public class EnderecoResource {
      * POST  /endereco : Create a new endereco.
      *
      * @param enderecoDTO the enderecoDTO to create
-     * @return the ResponseEntity with status 201 (Created) and with body the new enderecoDTO, or with status 400 (Bad Request) if the pessoa has already an ID
+     * @return the ResponseEntity with status 201 (Created) and with body the new enderecoDTO, or with status 400 (Bad Request) if the endereco has already an ID
      * @throws URISyntaxException if the Location URI syntax is incorrect
      */
     @PostMapping("/endereco")
     public ResponseEntity<EnderecoDTO> createEndereco(@RequestBody EnderecoDTO enderecoDTO) throws URISyntaxException, Exception {
-//        log.debug("REST request to save Pessoa : {}", pessoaDTO);
-
         EnderecoDTO result = enderecoService.save(enderecoDTO);
         return ResponseEntity.created(new URI("/api/endereco/" + result.getId()))
                 .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
@@ -47,7 +37,7 @@ public class EnderecoResource {
     }
 
     /**
-     * PUT  /endereco : Updates an existing pessoa.
+     * PUT  /endereco : Updates an existing Endereco.
      *
      * @param enderecoDTO the enderecoDTO to update
      * @return the ResponseEntity with status 200 (OK) and with body the updated enderecoDTO,
@@ -56,7 +46,7 @@ public class EnderecoResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect
      */
     @PutMapping("/endereco")
-    public ResponseEntity<EnderecoDTO> updatePessoa(@RequestBody EnderecoDTO enderecoDTO) throws Exception {
+    public ResponseEntity<EnderecoDTO> updateEndereco(@RequestBody EnderecoDTO enderecoDTO) throws Exception {
         if (enderecoDTO.getId() == null) {
             throw new Exception("Invalid id "+ENTITY_NAME+" idnull");
         }
