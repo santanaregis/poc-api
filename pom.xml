@@ -8,10 +8,10 @@
 		<version>2.1.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.rapidanet</groupId>
-	<artifactId>rapidanet-web</artifactId>
+	<groupId>com.santana</groupId>
+	<artifactId>spring-example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>rapidanet-web</name>
+	<name>spring-example</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
