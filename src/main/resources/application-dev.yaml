@@ -1,14 +1,15 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/spring
-    username: spring
-    password: password
+    url: jdbc:h2:file:./data/camunda
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
   jpa:
     properties:
       hibernate.temp:
         use_jdbc_metadata_defaults: false
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
     generate-ddl: true
 
 server:
