@@ -14,13 +14,15 @@
        - 40591d4a501e is the CONTAINER ID
        
    ##Running with compose (aws-Lightsail)
-   - step 1:  cd opt/projects/spring-example/src/main/resources
-   - step 1:  docker login
-   - step 1:  docker pull regissantana/spring-example:dev
-   - step 2:  TAG=dev docker-compose up -d
+   - step 2:  git pull origin master
+   - step 3:  docker login
+   - step 5:  TAG=dev docker-compose up -d
    
    
 ####Commands
 - kill all containers 
     - docker kill $(docker ps -q)
-
+- remove all stopped containers
+    - docker system prune
+- remove all images which are not referenced by any existing container
+    - docker image prune -a

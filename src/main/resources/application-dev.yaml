@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:file:./data/camunda
+    url: jdbc:h2:file:./data/api
     username: sa
     password:
     driver-class-name: org.h2.Driver
@@ -24,7 +24,7 @@ server:
     mimeTypes: text/xml, text/css, text/html, application/json
     minResponseSize: 4096
   servlet:
-    context-path: /spring-example
+    context-path: /poc-api
 
 logging:
   level:

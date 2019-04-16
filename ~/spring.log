@@ -1,0 +1,165 @@
+2019-03-12 11:43:08.988  INFO 21777 --- [main] c.s.s.SpringExampleApplication           : Starting SpringExampleApplication on NTCNOTE44 with PID 21777 (/home/regissantana/nt/pessoal/spring-example/target/classes started by regissantana in /home/regissantana/nt/pessoal/spring-example)
+2019-03-12 11:43:08.992  INFO 21777 --- [main] c.s.s.SpringExampleApplication           : No active profile set, falling back to default profiles: default
+2019-03-12 11:43:10.460  INFO 21777 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-12 11:43:10.563  INFO 21777 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95ms. Found 6 repository interfaces.
+2019-03-12 11:43:11.031  INFO 21777 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4a067732] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-12 11:43:11.322  INFO 21777 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-03-12 11:43:11.347  INFO 21777 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-12 11:43:11.347  INFO 21777 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-03-12 11:43:11.353  INFO 21777 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-03-12 11:43:11.472  INFO 21777 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-12 11:43:11.473  INFO 21777 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2416 ms
+2019-03-12 11:43:11.625  INFO 21777 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-03-12 11:43:11.995  INFO 21777 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-03-12 11:43:12.035  INFO 21777 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-12 11:43:12.077  INFO 21777 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-03-12 11:43:12.079  INFO 21777 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-03-12 11:43:12.190  INFO 21777 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-03-12 11:43:12.317  INFO 21777 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2019-03-12 11:43:12.328  INFO 21777 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000422: Disabling contextual LOB creation as connection was null
+2019-03-12 11:43:12.333  INFO 21777 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@b9d018b
+2019-03-12 11:43:13.077  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.077  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "bairro" does not exist, skipping
+2019-03-12 11:43:13.078  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.078  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "cidade" does not exist, skipping
+2019-03-12 11:43:13.079  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.079  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "contato" does not exist, skipping
+2019-03-12 11:43:13.079  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.080  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "endereco" does not exist, skipping
+2019-03-12 11:43:13.080  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.081  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "plano" does not exist, skipping
+2019-03-12 11:43:13.082  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.083  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "plano" does not exist, skipping
+2019-03-12 11:43:13.084  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.084  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "plano_ativacao" does not exist, skipping
+2019-03-12 11:43:13.085  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.085  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "plano_ativacao" does not exist, skipping
+2019-03-12 11:43:13.086  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.086  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : relation "velocidade" does not exist, skipping
+2019-03-12 11:43:13.087  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.087  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "ativacao" does not exist, skipping
+2019-03-12 11:43:13.088  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.088  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "bairro" does not exist, skipping
+2019-03-12 11:43:13.088  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.090  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "canal" does not exist, skipping
+2019-03-12 11:43:13.091  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.091  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "cidade" does not exist, skipping
+2019-03-12 11:43:13.091  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.091  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "contato" does not exist, skipping
+2019-03-12 11:43:13.092  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.092  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "endereco" does not exist, skipping
+2019-03-12 11:43:13.092  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.092  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "estado" does not exist, skipping
+2019-03-12 11:43:13.093  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.093  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "faixa_etaria" does not exist, skipping
+2019-03-12 11:43:13.094  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.094  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "motivo" does not exist, skipping
+2019-03-12 11:43:13.095  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.095  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "operadora" does not exist, skipping
+2019-03-12 11:43:13.095  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.095  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "origem" does not exist, skipping
+2019-03-12 11:43:13.096  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.096  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "pessoa" does not exist, skipping
+2019-03-12 11:43:13.096  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.096  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "plano" does not exist, skipping
+2019-03-12 11:43:13.097  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.097  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "plano_ativacao" does not exist, skipping
+2019-03-12 11:43:13.097  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.098  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "produto" does not exist, skipping
+2019-03-12 11:43:13.098  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.098  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "promocao" does not exist, skipping
+2019-03-12 11:43:13.098  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.099  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "tecnologia" does not exist, skipping
+2019-03-12 11:43:13.099  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.099  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "velocidade" does not exist, skipping
+2019-03-12 11:43:13.100  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2019-03-12 11:43:13.100  WARN 21777 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "sequence_generator" does not exist, skipping
+2019-03-12 11:43:15.443  INFO 21777 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@720a1fd0'
+2019-03-12 11:43:15.450  INFO 21777 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-12 11:43:16.009  WARN 21777 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-12 11:43:16.167  INFO 21777 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-03-12 11:43:16.306  INFO 21777 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-12 11:43:16.450  INFO 21777 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-03-12 11:43:16.463  INFO 21777 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-03-12 11:43:16.493  INFO 21777 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-03-12 11:43:16.721  INFO 21777 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2019-03-12 11:43:16.723  INFO 21777 --- [main] c.s.s.SpringExampleApplication           : Started SpringExampleApplication in 8.385 seconds (JVM running for 9.042)
+2019-03-12 11:52:32.366  INFO 21777 --- [Thread-20] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-12 11:52:32.584  INFO 21777 --- [Thread-20] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-12 11:52:32.584  INFO 21777 --- [Thread-20] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-03-12 11:52:32.917  INFO 21777 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-03-12 11:52:32.940  INFO 21777 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-03-12 11:52:36.041  INFO 23405 --- [main] c.s.s.SpringExampleApplication           : Starting SpringExampleApplication on NTCNOTE44 with PID 23405 (/home/regissantana/nt/pessoal/spring-example/target/classes started by regissantana in /home/regissantana/nt/pessoal/spring-example)
+2019-03-12 11:52:36.045  INFO 23405 --- [main] c.s.s.SpringExampleApplication           : No active profile set, falling back to default profiles: default
+2019-03-12 11:52:36.786  INFO 23405 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-12 11:52:36.855  INFO 23405 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64ms. Found 6 repository interfaces.
+2019-03-12 11:52:37.138  INFO 23405 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d4b0b884] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-12 11:52:37.415  INFO 23405 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-03-12 11:52:37.436  INFO 23405 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-12 11:52:37.437  INFO 23405 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-03-12 11:52:37.443  INFO 23405 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-03-12 11:52:37.507  INFO 23405 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-12 11:52:37.508  INFO 23405 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1422 ms
+2019-03-12 11:52:37.575 ERROR 23405 --- [main] com.zaxxer.hikari.HikariConfig           : Failed to load driver class org.h2.Driver from HikariConfig class classloader sun.misc.Launcher$AppClassLoader@18b4aac2
+2019-03-12 11:52:37.577  WARN 23405 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under '' to com.zaxxer.hikari.HikariDataSource
+2019-03-12 11:52:37.579  INFO 23405 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-03-12 11:52:37.592  INFO 23405 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-03-12 11:52:37.596 ERROR 23405 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under '' to com.zaxxer.hikari.HikariDataSource:
+
+    Property: driverclassname
+    Value: org.h2.Driver
+    Origin: "driverClassName" from property source "source"
+    Reason: Failed to load driver class org.h2.Driver in either of HikariConfig class loader or Thread context classloader
+
+Action:
+
+Update your application's configuration
+
+2019-03-12 11:54:01.070  INFO 23697 --- [main] c.s.s.SpringExampleApplication           : Starting SpringExampleApplication on NTCNOTE44 with PID 23697 (/home/regissantana/nt/pessoal/spring-example/target/classes started by regissantana in /home/regissantana/nt/pessoal/spring-example)
+2019-03-12 11:54:01.078  INFO 23697 --- [main] c.s.s.SpringExampleApplication           : No active profile set, falling back to default profiles: default
+2019-03-12 11:54:02.140  INFO 23697 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-12 11:54:02.224  INFO 23697 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78ms. Found 6 repository interfaces.
+2019-03-12 11:54:02.533  INFO 23697 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f86f5116] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-12 11:54:02.792  INFO 23697 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-03-12 11:54:02.811  INFO 23697 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-12 11:54:02.811  INFO 23697 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-03-12 11:54:02.817  INFO 23697 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-03-12 11:54:02.888  INFO 23697 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-12 11:54:02.888  INFO 23697 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1733 ms
+2019-03-12 11:54:03.029  INFO 23697 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-03-12 11:54:03.263  INFO 23697 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-03-12 11:54:03.301  INFO 23697 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-12 11:54:03.343  INFO 23697 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-03-12 11:54:03.344  INFO 23697 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-03-12 11:54:03.427  INFO 23697 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-03-12 11:54:03.534  INFO 23697 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-03-12 11:54:03.551  INFO 23697 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000422: Disabling contextual LOB creation as connection was null
+2019-03-12 11:54:04.268  INFO 23697 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@45f9d394'
+2019-03-12 11:54:04.271  INFO 23697 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-12 11:54:04.773  WARN 23697 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-12 11:54:04.963  INFO 23697 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-03-12 11:54:05.091  INFO 23697 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-12 11:54:05.250  INFO 23697 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-03-12 11:54:05.264  INFO 23697 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-03-12 11:54:05.294  INFO 23697 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-03-12 11:54:05.521  INFO 23697 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2019-03-12 11:54:05.523  INFO 23697 --- [main] c.s.s.SpringExampleApplication           : Started SpringExampleApplication in 5.008 seconds (JVM running for 5.626)
+2019-03-12 11:55:24.629  INFO 23697 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-03-12 11:55:24.641  INFO 23697 --- [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-03-12 11:55:24.644  INFO 23697 --- [Thread-13] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-03-12 11:55:24.713  INFO 23697 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-03-12 11:55:24.724  INFO 23697 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

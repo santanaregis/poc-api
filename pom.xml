@@ -9,14 +9,14 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.santana</groupId>
-	<artifactId>spring-example</artifactId>
+	<artifactId>api-poc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-example</name>
-	<description>Demo project for Spring Boot</description>
+	<name>api-poc</name>
+	<description>POC of an API concept</description>
 
 	<properties>
 		<java.version>1.8</java.version>
-		<docker.image.prefix>examples</docker.image.prefix>
+		<!--<docker.image.prefix>examples</docker.image.prefix>-->
 	</properties>
 
 	<dependencies>
@@ -69,10 +69,20 @@
 			<version>LATEST</version>
 		</dependency>
 		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct-processor</artifactId>
+			<version>LATEST</version>
+		</dependency>
+		<dependency>
 			<groupId>org.zalando</groupId>
 			<artifactId>problem-spring-web</artifactId>
 			<version>0.23.0</version>
 		</dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
 	</dependencies>
 
 	<build>
@@ -86,7 +96,7 @@
 				<artifactId>dockerfile-maven-plugin</artifactId>
 				<version>1.4.9</version>
 				<configuration>
-					<repository>regissantana/spring-example</repository>
+					<repository>regissantana/api-poc</repository>
 					<tag>${image.tag}</tag>
 				</configuration>
 			</plugin>
